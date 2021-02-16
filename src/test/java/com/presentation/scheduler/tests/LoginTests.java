@@ -11,6 +11,6 @@ public class LoginTests extends TestBase{
                 .withEmail("lena@telran.com")
                 .withPassword("123456Aa"));
         app.getUserHelper().skipSettings();
-        Assert.assertTrue(app.getUserHelper().isLoggedIn());
+        Assert.assertTrue(app.getUserHelper().isUserLoggedIn());
     }
 }

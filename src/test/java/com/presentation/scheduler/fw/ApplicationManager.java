@@ -15,6 +15,7 @@ public class ApplicationManager {
     //  Properties propeties;
     AppiumDriver driver;
     UserHelper userHelper;
+    EventHelper event;
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
     DesiredCapabilities capabilities;
 
@@ -48,6 +49,7 @@ public class ApplicationManager {
 
 
         userHelper = new UserHelper(driver);
+        event = new EventHelper(driver);
     }
 
     public String getAppVersion(){
@@ -69,5 +71,9 @@ public class ApplicationManager {
 
     public UserHelper getUserHelper() {
         return userHelper;
+    }
+
+    public EventHelper event() {
+        return event;
     }
 }
